@@ -1,5 +1,5 @@
-const Dollar = require("./dollar");
-const Franc = require("./franc");
+import { Franc } from "./franc";
+import { Dollar } from "./dollar";
 
 describe("Money", () => {
   test("should check equality from difference currency", () => {

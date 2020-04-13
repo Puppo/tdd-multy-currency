@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/Puppo/tdd-multy-currency#readme",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-typescript": "^7.9.0",
+    "babel-jest": "^25.3.0",
     "jest": "^25.3.0"
   },
   "dependencies": {

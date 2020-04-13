@@ -1,4 +1,4 @@
-const Dollar = require("./dollar");
+import { Dollar } from "./dollar";
 
 describe("Dollar", () => {
   test("should return the correct multiplication from dollar", () => {

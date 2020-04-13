@@ -1,4 +1,4 @@
-const Franc = require("./franc");
+import { Franc } from "./franc";
 
 describe("Franc", () => {
   test("should multiple correct franc", () => {
