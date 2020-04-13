@@ -2,16 +2,15 @@ const Dollar = require("./dollar");
 
 describe("Dollar", () => {
   test("should return the correct multiplication from dollar", () => {
-    const inputs = [
-      { value: 5, multiplier: 2 },
-      { value: 5, multiplier: 3 },
+    const testCases = [
+      { value: 5, multiplier: 2, result: 10 },
+      { value: 5, multiplier: 3, result: 15 },
     ];
-    const products = [10, 15];
-    for (let i = 0; i < inputs.length; i++) {
-      const { value, multiplier } = inputs[i];
-      const five = new Dollar(value);
-      const product = five.times(multiplier);
-      expect(product.amount).toBe(products[i]);
+    for (let i = 0; i < testCases.length; i++) {
+      const { value, multiplier, result } = testCases[i];
+      const start = new Dollar(value);
+      const product = start.times(multiplier);
+      expect(product.equals(new Dollar(result))).toBeTruthy();
     }
   });
 

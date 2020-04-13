@@ -3,12 +3,8 @@ class Dollar {
     this._amount = amount;
   }
 
-  get amount() {
-    return this._amount;
-  }
-
   times(multiplier) {
-    return new Dollar(this.amount * multiplier);
+    return new Dollar(this._amount * multiplier);
   }
 
   equals(obj) {
