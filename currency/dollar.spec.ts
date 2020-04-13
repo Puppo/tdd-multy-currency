@@ -1,4 +1,5 @@
-import { Dollar } from "./dollar";
+import { Money } from "./money";
+import { dollar } from "./dollar";
 
 describe("Dollar", () => {
   test("should return the correct multiplication from dollar", () => {
@@ -8,14 +9,14 @@ describe("Dollar", () => {
     ];
     for (let i = 0; i < testCases.length; i++) {
       const { value, multiplier, result } = testCases[i];
-      const start = new Dollar(value);
+      const start = dollar(value);
       const product = start.times(multiplier);
-      expect(product.equals(new Dollar(result))).toBeTruthy();
+      expect(product.equals(dollar(result))).toBeTruthy();
     }
   });
 
   test("should check the equality", () => {
-    expect(new Dollar(5).equals(new Dollar(5))).toBeTruthy();
-    expect(new Dollar(5).equals(new Dollar(10))).toBeFalsy();
+    expect(dollar(5).equals(dollar(5))).toBeTruthy();
+    expect(dollar(5).equals(dollar(10))).toBeFalsy();
   });
 });

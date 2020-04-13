@@ -1,9 +1,9 @@
-import { Franc } from "./franc";
+import { franc } from "./franc";
 
 describe("Franc", () => {
   test("should multiple correct franc", () => {
-    const five = new Franc(5);
-    expect(new Franc(10).equals(five.times(2))).toBeTruthy();
-    expect(new Franc(15).equals(five.times(3))).toBeTruthy();
+    const five = franc(5);
+    expect(franc(10).equals(five.times(2))).toBeTruthy();
+    expect(franc(15).equals(five.times(3))).toBeTruthy();
   });
 });
