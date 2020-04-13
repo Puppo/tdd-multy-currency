@@ -1,0 +1,25 @@
+{
+  "name": "tdd-multy-currency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Puppo/tdd-multy-currency.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Puppo/tdd-multy-currency/issues"
+  },
+  "homepage": "https://github.com/Puppo/tdd-multy-currency#readme",
+  "devDependencies": {
+    "jest": "^25.3.0"
+  },
+  "dependencies": {
+    "@types/jest": "^25.2.1"
+  }
+}
