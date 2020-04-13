@@ -1,4 +1,7 @@
-export class Money {
+import { Expression } from "./expression";
+import { Sum } from "./sum";
+
+export class Money implements Expression {
   static dollar(amount: number): Money {
     return new Money(amount, "USD");
   }
@@ -7,15 +10,12 @@ export class Money {
     return new Money(amount, "CHF");
   }
 
-  private _amount: number;
-  private _currency: String;
+  constructor(
+    private readonly _amount: number,
+    private readonly _currency: String
+  ) {}
 
-  constructor(amount: number, currency: String) {
-    this._amount = amount;
-    this._currency = currency;
-  }
-
-  protected get amount() {
+  get amount() {
     return this._amount;
   }
 
@@ -24,14 +24,22 @@ export class Money {
   }
 
   times(multiplier: number): Money {
-    return new Money(this.amount * multiplier, this.currency);
+    return new Money(this._amount * multiplier, this._currency);
+  }
+
+  plus(added: Money): Sum {
+    return new Sum(this, added);
+  }
+
+  reduce(to: String): Money {
+    return this;
   }
 
   equals(obj: Money) {
-    return this._amount === obj._amount && this.currency === obj.currency;
+    return this._amount === obj._amount && this._currency === obj._currency;
   }
 
   toString() {
-    return `${this.amount} ${this.currency}`;
+    return `${this._amount} ${this._currency}`;
   }
 }
