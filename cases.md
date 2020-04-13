@@ -10,8 +10,8 @@
 - Equals null
 - Equals object
 - ~~5 CHF \* 2 = 10 CHF~~
-- Dollar/Franc duplication
+- ~~Dollar/Franc duplication~~
 - ~~Common equals~~
-- Common times
+- ~~Common times~~
 - ~~Compare Francs with Dollars~~
 - ~~Currency~~
