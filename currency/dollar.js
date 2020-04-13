@@ -10,6 +10,10 @@ class Dollar {
   times(multiplier) {
     return new Dollar(this.amount * multiplier);
   }
+
+  equals(obj) {
+    return this._amount === obj._amount;
+  }
 }
 
 module.exports = Dollar;

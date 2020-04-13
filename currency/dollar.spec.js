@@ -14,4 +14,9 @@ describe("Dollar", () => {
       expect(product.amount).toBe(products[i]);
     }
   });
+
+  test("should check the equality", () => {
+    expect(new Dollar(5).equals(new Dollar(5))).toBeTruthy();
+    expect(new Dollar(5).equals(new Dollar(10))).toBeFalsy();
+  });
 });
