@@ -14,4 +14,4 @@
 - ~~Common equals~~
 - Common times
 - ~~Compare Francs with Dollars~~
-- Currency
+- ~~Currency~~
