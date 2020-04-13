@@ -4,7 +4,10 @@ class Money {
   }
 
   equals(obj) {
-    return this._amount === obj._amount;
+    return (
+      this._amount === obj._amount &&
+      this.constructor.name === obj.constructor.name
+    );
   }
 }
 
