@@ -1,15 +1,17 @@
 const Dollar = require("./dollar");
 
 describe("Dollar", () => {
-  test("should return `10$` if the operation is `5$ * 2`", () => {
-    const five = new Dollar(5);
-    five.times(2);
-    expect(five.amount).toBe(10);
-  });
-
-  test("should return `15$` if the operation is `5$ * 3`", () => {
-    const five = new Dollar(5);
-    five.times(3);
-    expect(five.amount).toBe(15);
+  test("should return the correct multiplication from dollar", () => {
+    const inputs = [
+      { value: 5, multiplier: 2 },
+      { value: 5, multiplier: 3 },
+    ];
+    const products = [10, 15];
+    for (let i = 0; i < inputs.length; i++) {
+      const { value, multiplier } = inputs[i];
+      const five = new Dollar(value);
+      const product = five.times(multiplier);
+      expect(product.amount).toBe(products[i]);
+    }
   });
 });
