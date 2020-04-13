@@ -5,7 +5,7 @@
 - Make "amount" private
 - ~~Dollar side effects?~~
 - Money rounding?
-- **equals**
+- ~~equals~~
 - hashCode
 - Equals null
 - Equals object
